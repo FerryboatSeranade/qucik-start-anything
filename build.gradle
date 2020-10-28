@@ -1,0 +1,47 @@
+buildscript {
+    ext {
+        lombokVersion = "1.18.16"
+    }
+}
+plugins {
+    id 'java'
+}
+
+group 'shu.shen'
+version '1.0-SNAPSHOT'
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+
+    repositories {
+        mavenLocal()
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+        maven { url 'https://maven.aliyun.com/repository/google/' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter/' }
+        mavenCentral()
+        jcenter()
+        maven { url "https://repo.spring.io/snapshot" }
+        maven { url "https://repo.spring.io/milestone" }
+        maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local/' }  //转换pdf使用
+    }
+    dependencies {
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+
+        //lombok: 官方推荐的方式:为了解决编译的时候lombok的问题
+        implementation group: 'org.projectlombok', name: 'lombok', version: "${lombokVersion}"
+        annotationProcessor group: 'org.projectlombok', name: 'lombok', version: "${lombokVersion}"
+        compileOnly group: 'org.projectlombok', name: 'lombok', version: "${lombokVersion}"
+        testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: "${lombokVersion}"
+        testCompileOnly group: 'org.projectlombok', name: 'lombok', version: "${lombokVersion}"
+
+        //spring-boot系列
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.3.4.RELEASE'
+        testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.3.4.RELEASE'
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.3.4.RELEASE'
+        testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.3.4.RELEASE'
+
+    }
+}
+
+

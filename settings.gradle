@@ -1,0 +1,11 @@
+rootProject.name = 'qucik-start-anything'
+include 'netty'
+include 'mvc-ee'
+include 'spring-security'
+include 'etc'
+include 'event'
+include 'mongo'
+include 'dto'
+include 'gitDemo'
+
+

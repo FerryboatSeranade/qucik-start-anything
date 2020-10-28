@@ -1,0 +1,10 @@
+dependencies {
+//lombok
+    implementation group: 'org.projectlombok', name: 'lombok', version: "${lombokVersion}"
+// 官方推荐的方式:为了解决编译的时候lombok的问题
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: "${lombokVersion}"
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: "${lombokVersion}"
+    testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: "${lombokVersion}"
+    testCompileOnly group: 'org.projectlombok', name: 'lombok', version: "${lombokVersion}"
+
+}

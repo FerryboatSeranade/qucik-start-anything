@@ -1,0 +1,26 @@
+jar {
+    baseName = 'gs-securing-web'
+    version =  '0.1.0'
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.3.4.RELEASE'
+// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.3.4.RELEASE'
+// https://mvnrepository.com/artifact/io.spring.platform/platform-versions
+    compile group: 'io.spring.platform', name: 'platform-versions', version: '1.1.5.RELEASE'
+// https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-dependencies
+    runtime group: 'org.springframework.cloud', name: 'spring-cloud-dependencies', version: 'Hoxton.SR2', ext: 'pom'
+// https://mvnrepository.com/artifact/org.springframework.session/spring-session
+//    compile group: 'org.springframework.session', name: 'spring-session', version: '1.2.2.RELEASE'
+// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security
+//    compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.3.4.RELEASE'
+// https://mvnrepository.com/artifact/org.springframework.data/spring-data-commons
+    compile group: 'org.springframework.data', name: 'spring-data-commons', version: '2.3.4.RELEASE'
+// https://mvnrepository.com/artifact/org.hibernate/hibernate-validator
+    //javax.validation! JSR!!!
+    compile group: 'org.hibernate', name: 'hibernate-validator', version: '6.1.6.Final'
+
+}
