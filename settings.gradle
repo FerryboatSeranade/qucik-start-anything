@@ -7,5 +7,5 @@ include 'event'
 include 'mongo'
 include 'dto'
 include 'gitDemo'
-
+include 'http-basic'
 
